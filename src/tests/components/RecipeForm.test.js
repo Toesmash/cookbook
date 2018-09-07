@@ -12,9 +12,3 @@ test('Render RecipeForm with recipe data', () => {
   const wrapper = shallow(<RecipeForm recipe={dummyData[0]} />);
   expect(wrapper).toMatchSnapshot();
 });
-
-test('Render error when submitting incomplete RecipeForm', () => {
-  const wrapper = shallow(<RecipeForm />);
-  wrapper.find('form').simulate('submit', { preventDefault: () => { } });
-  expect(wrapper).toMatchSnapshot();
-});

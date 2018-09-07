@@ -8,8 +8,8 @@ const Edit = (props) => {
     <div>
       <RecipeForm
         recipe={props.recipe}
-        onSubmit={(recipe) => {
-          props.dispatch(editRecipe(props.recipe.id, recipe));
+        onSubmit={(update) => {
+          props.editRecipe(props.recipe.id, update)
           props.history.push('/')
         }}
       />
@@ -17,10 +17,14 @@ const Edit = (props) => {
   );
 }
 
+const mapDispatchToProps = (dispatch) => ({
+  editRecipe: (id, update) => dispatch(editRecipe(id, update))
+});
+
 const mapStateToProps = (store, props) => ({
   recipe: store.recipes.find((item) => {
     return item.id == props.match.params.id;
   })
 });
 
-export default connect(mapStateToProps)(Edit);
+export default connect(mapStateToProps, mapDispatchToProps)(Edit);

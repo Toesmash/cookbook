@@ -13,7 +13,7 @@ const Recipe = (props) => {
       <button><Link to={`/edit/${id}`}>Edit Recipe</Link></button>
       <button
         onClick={() => {
-          props.dispatch(removeRecipe(id));
+          props.removeRecipe(id);
           props.history.push('/');
         }}
       >Delete Recipe</button>
@@ -21,12 +21,14 @@ const Recipe = (props) => {
   );
 }
 
-const mapStateToProps = (store, props) => {
-  return {
-    recipe: store.recipes.find((item) => {
-      return item.id == props.match.params.id;
-    })
-  };
-};
+const mapDispatchToProps = (dispatch) => ({
+  removeRecipe: (id) => dispatch(removeRecipe(id))
+});
 
-export default connect(mapStateToProps)(Recipe);
+const mapStateToProps = (store, props) => ({
+  recipe: store.recipes.find((item) => {
+    return item.id == props.match.params.id;
+  })
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Recipe);

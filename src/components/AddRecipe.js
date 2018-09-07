@@ -8,7 +8,7 @@ const AddRecipe = (props) => {
     <div>
       <RecipeForm
         onSubmit={(recipe) => {
-          props.dispatch(addRecipe(recipe));
+          props.addRecipe(recipe);
           props.history.push('/');
         }}
       />
@@ -16,4 +16,8 @@ const AddRecipe = (props) => {
   );
 }
 
-export default connect()(AddRecipe);
+const mapDispatchToProps = (dispatch) => ({
+  addRecipe: (recipe) => dispatch(addRecipe(recipe))
+});
+
+export default connect(undefined, mapDispatchToProps)(AddRecipe);
