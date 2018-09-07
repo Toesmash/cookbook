@@ -8,10 +8,7 @@ const AddRecipe = (props) => {
     <div>
       <RecipeForm
         onSubmit={(recipe) => {
-          props.dispatch(addRecipe({
-            id: new Date().getTime().toString(32),
-            ...recipe
-          }));
+          props.dispatch(addRecipe(recipe));
           props.history.push('/');
         }}
       />

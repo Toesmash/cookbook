@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render RecipeForm with recipe data 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      name="title"
+      onChange={[Function]}
+      placeholder="Title"
+      type="text"
+      value="halusky"
+    />
+    <input
+      name="feeds"
+      onChange={[Function]}
+      placeholder="2"
+      type="text"
+      value={4}
+    />
+    <input
+      name="preparation"
+      onChange={[Function]}
+      placeholder="60"
+      type="text"
+      value={60}
+    />
+    <textarea
+      onChange={[Function]}
+      placeholder="Ingredients"
+      value="1kg zemiaky
+300g hladka muka
+sol
+250g bryndza
+100g slaninka"
+    />
+    <textarea
+      onChange={[Function]}
+      placeholder="Instructions"
+      value="Ocistit zemiaky, nastruhat, pridat muku a sol
+Zamiesit cesto
+Vlozit do vriacej vody
+Zmiesat s bryndzou"
+    />
+    <button>
+      Submit
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Render RecipeForm without recipe data 1`] = `
+<div>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      name="title"
+      onChange={[Function]}
+      placeholder="Title"
+      type="text"
+      value=""
+    />
+    <input
+      name="feeds"
+      onChange={[Function]}
+      placeholder="2"
+      type="text"
+      value=""
+    />
+    <input
+      name="preparation"
+      onChange={[Function]}
+      placeholder="60"
+      type="text"
+      value=""
+    />
+    <textarea
+      onChange={[Function]}
+      placeholder="Ingredients"
+      value=""
+    />
+    <textarea
+      onChange={[Function]}
+      placeholder="Instructions"
+      value=""
+    />
+    <button>
+      Submit
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Render error when submitting incomplete RecipeForm 1`] = `
+<div>
+  <p>
+    Please set correct
+  </p>
+  <form
+    onSubmit={[Function]}
+  >
+    <input
+      autoFocus={true}
+      name="title"
+      onChange={[Function]}
+      placeholder="Title"
+      type="text"
+      value=""
+    />
+    <input
+      name="feeds"
+      onChange={[Function]}
+      placeholder="2"
+      type="text"
+      value=""
+    />
+    <input
+      name="preparation"
+      onChange={[Function]}
+      placeholder="60"
+      type="text"
+      value=""
+    />
+    <textarea
+      onChange={[Function]}
+      placeholder="Ingredients"
+      value=""
+    />
+    <textarea
+      onChange={[Function]}
+      placeholder="Instructions"
+      value=""
+    />
+    <button>
+      Submit
+    </button>
+  </form>
+</div>
+`;

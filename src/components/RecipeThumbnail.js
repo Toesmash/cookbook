@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const RecipeThumbnail = (props) => {
+const RecipeThumbnail = ({ id, title }) => {
   return (
     <div>
-      <Link to={`/view/${props.id}`}>{props.title}</Link>
+      <Link to={`/view/${id}`}>{title}</Link>
     </div>
   );
 }

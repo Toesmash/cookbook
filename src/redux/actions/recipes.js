@@ -3,7 +3,10 @@
 // ADD RECIPE
 export const addRecipe = (recipe) => ({
   type: 'ADD_RECIPE',
-  recipe
+  recipe: {
+    id: new Date().getTime().toString(32),
+    ...recipe
+  }
 });
 
 // EDIT RECIPE

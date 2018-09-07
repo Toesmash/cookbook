@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header rendering 1`] = `
+<header>
+  <Link
+    replace={false}
+    to="/"
+  >
+    <h1>
+      CookBook
+    </h1>
+  </Link>
+  <Link
+    replace={false}
+    to="/create"
+  >
+    Create Recipe
+  </Link>
+</header>
+`;

@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render RecipeList with data 1`] = `
+<div>
+  <h1>
+    Title
+  </h1>
+  <RecipeThumbnail
+    feeds={4}
+    id="1"
+    ingredients={
+      Array [
+        "1kg zemiaky",
+        "300g hladka muka",
+        "sol",
+        "250g bryndza",
+        "100g slaninka",
+      ]
+    }
+    instructions={
+      Array [
+        "Ocistit zemiaky, nastruhat, pridat muku a sol",
+        "Zamiesit cesto",
+        "Vlozit do vriacej vody",
+        "Zmiesat s bryndzou",
+      ]
+    }
+    key="1"
+    preparation={60}
+    rating={true}
+    title="halusky"
+  />
+  <RecipeThumbnail
+    feeds={4}
+    id="2"
+    ingredients={
+      Array [
+        "Parky",
+        "Kecup",
+      ]
+    }
+    instructions={
+      Array [
+        "Vlozit parky do vriacej vody",
+        "Pridat kecup",
+      ]
+    }
+    key="2"
+    preparation={20}
+    rating={false}
+    title="Parky"
+  />
+</div>
+`;
+
+exports[`Render RecipeList without data 1`] = `
+<div>
+  <h1>
+    Title
+  </h1>
+  <p>
+    No recipes
+  </p>
+</div>
+`;
