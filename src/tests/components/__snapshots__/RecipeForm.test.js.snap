@@ -1,56 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render RecipeForm with recipe data 1`] = `
-<Formik
-  enableReinitialize={false}
-  handleSubmit={[Function]}
-  initialValues={
-    Object {
-      "feeds": 4,
-      "ingredients": "1kg zemiaky
-300g hladka muka
-sol
-250g bryndza
-100g slaninka",
-      "instructions": "Ocistit zemiaky, nastruhat, pridat muku a sol
-Zamiesit cesto
-Vlozit do vriacej vody
-Zmiesat s bryndzou",
-      "preparation": 60,
-      "title": "halusky",
-    }
-  }
-  isInitialValid={false}
-  onSubmit={[Function]}
-  recipe={
-    Object {
-      "feeds": 4,
-      "id": "1",
-      "ingredients": Array [
-        "1kg zemiaky",
-        "300g hladka muka",
-        "sol",
-        "250g bryndza",
-        "100g slaninka",
-      ],
-      "instructions": Array [
-        "Ocistit zemiaky, nastruhat, pridat muku a sol",
-        "Zamiesit cesto",
-        "Vlozit do vriacej vody",
-        "Zmiesat s bryndzou",
-      ],
-      "preparation": 60,
-      "rating": true,
-      "title": "halusky",
-    }
-  }
-  render={[Function]}
-  validateOnBlur={true}
-  validateOnChange={true}
-  validationSchema={[Function]}
-/>
-`;
-
 exports[`Render RecipeForm without recipe data 1`] = `
 <Formik
   enableReinitialize={false}

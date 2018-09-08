@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render EditRecipe component 1`] = `
+<div>
+  <WithFormik(RecipeForm)
+    onSubmit={[Function]}
+    recipe={
+      Object {
+        "feeds": 4,
+        "id": "2",
+        "ingredients": Array [
+          "Parky",
+          "Kecup",
+        ],
+        "instructions": Array [
+          "Vlozit parky do vriacej vody",
+          "Pridat kecup",
+        ],
+        "preparation": 20,
+        "rating": false,
+        "title": "Parky",
+      }
+    }
+  />
+</div>
+`;

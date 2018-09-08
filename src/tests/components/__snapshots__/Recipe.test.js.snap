@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render Recipe component 1`] = `
+<div>
+  <p>
+    halusky
+  </p>
+  <p>
+    1kg zemiaky
+    300g hladka muka
+    sol
+    250g bryndza
+    100g slaninka
+  </p>
+  <p>
+    Ocistit zemiaky, nastruhat, pridat muku a sol
+    Zamiesit cesto
+    Vlozit do vriacej vody
+    Zmiesat s bryndzou
+  </p>
+  <button>
+    <Link
+      replace={false}
+      to="/edit/1"
+    >
+      Edit Recipe
+    </Link>
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Delete Recipe
+  </button>
+</div>
+`;

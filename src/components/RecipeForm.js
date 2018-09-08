@@ -2,7 +2,7 @@ import React from 'react';
 import * as Yup from 'yup';
 import { withFormik, Form, Field } from 'formik';
 
-const RecipeForm = ({ errors, touched }) => {
+export const RecipeForm = ({ errors, touched }) => {
   return (
     <div>
       <Form>
@@ -40,7 +40,7 @@ const schema = {
   instructions: Yup.string().required('Required field').matches(/^[a-zA-Z0-9,\.\-\/:\(\)\n\s]*$/, 'No special characters allowed')
 };
 
-const FormikRecipeForm = withFormik({
+export const FormikRecipeForm = withFormik({
   mapPropsToValues({ recipe }) {
     return {
       title: recipe ? recipe.title : '',
@@ -54,8 +54,8 @@ const FormikRecipeForm = withFormik({
   handleSubmit(values, { props }) {
     props.onSubmit({
       ...values,
-      ingredients: values.instructions.split('\n').filter(item => item),
-      instructions: values.ingredients.split('\n').filter(item => item)
+      ingredients: values.ingredients.split('\n').filter(item => item),
+      instructions: values.instructions.split('\n').filter(item => item)
     });
   }
 

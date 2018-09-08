@@ -3,22 +3,25 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { removeRecipe } from '../redux/actions/recipes';
 
-const Recipe = (props) => {
-  const { title, ingredients, instructions, id } = props.recipe;
-  return (
-    <div>
-      <p>{title}</p>
-      <p>{ingredients}</p>
-      <p>{instructions}</p>
-      <button><Link to={`/edit/${id}`}>Edit Recipe</Link></button>
-      <button
-        onClick={() => {
-          props.removeRecipe(id);
-          props.history.push('/');
-        }}
-      >Delete Recipe</button>
-    </div>
-  );
+
+export class Recipe extends React.Component {
+  onRemove = () => {
+    this.props.removeRecipe(this.props.recipe.id);
+    this.props.history.push('/');
+  }
+
+  render() {
+    const { title, ingredients, instructions, id } = this.props.recipe;
+    return (
+      <div>
+        <p>{title}</p>
+        <p>{ingredients}</p>
+        <p>{instructions}</p>
+        <button><Link to={`/edit/${id}`}>Edit Recipe</Link></button>
+        <button onClick={this.onRemove} >Delete Recipe</button>
+      </div>
+    );
+  }
 }
 
 const mapDispatchToProps = (dispatch) => ({

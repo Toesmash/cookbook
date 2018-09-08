@@ -3,17 +3,21 @@ import { connect } from 'react-redux';
 import RecipeForm from './RecipeForm';
 import { addRecipe } from '../redux/actions/recipes';
 
-const AddRecipe = (props) => {
-  return (
-    <div>
-      <RecipeForm
-        onSubmit={(recipe) => {
-          props.addRecipe(recipe);
-          props.history.push('/');
-        }}
-      />
-    </div>
-  );
+export class AddRecipe extends React.Component {
+  onSubmit = (recipe) => {
+    this.props.addRecipe(recipe);
+    this.props.history.push('/');
+  };
+
+  render() {
+    return (
+      <div>
+        <RecipeForm
+          onSubmit={this.onSubmit}
+        />
+      </div>
+    );
+  };
 }
 
 const mapDispatchToProps = (dispatch) => ({
