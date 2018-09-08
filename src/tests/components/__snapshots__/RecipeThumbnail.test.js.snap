@@ -2,11 +2,13 @@
 
 exports[`Render RecipeThumbnail 1`] = `
 <div>
-  <Link
-    replace={false}
-    to="/view/1"
-  >
-    halusky
-  </Link>
+  <p>
+    <Link
+      replace={false}
+      to="/view/1"
+    >
+      halusky
+    </Link>
+  </p>
 </div>
 `;

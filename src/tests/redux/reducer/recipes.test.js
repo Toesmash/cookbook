@@ -64,3 +64,21 @@ test('Add recipe', () => {
   const state = recipeReducer(dummyData, action);
   expect(state).toEqual([...dummyData, recipe]);
 });
+
+test('Like recipe', () => {
+  const action = {
+    type: 'LIKE_RECIPE',
+    id: '1'
+  };
+  const state = recipeReducer(dummyData, action);
+  expect(state[0].rating).toEqual({ like: true, dislike: false });
+});
+
+test('Dislike recipe', () => {
+  const action = {
+    type: 'DISLIKE_RECIPE',
+    id: '2'
+  };
+  const state = recipeReducer(dummyData, action);
+  expect(state[1].rating).toEqual({ like: false, dislike: true });
+});

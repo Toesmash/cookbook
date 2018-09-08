@@ -27,7 +27,12 @@ exports[`Render RecipeList with data 1`] = `
     }
     key="1"
     preparation={60}
-    rating={true}
+    rating={
+      Object {
+        "dislike": false,
+        "like": false,
+      }
+    }
     title="halusky"
   />
   <RecipeThumbnail
@@ -47,7 +52,12 @@ exports[`Render RecipeList with data 1`] = `
     }
     key="2"
     preparation={20}
-    rating={false}
+    rating={
+      Object {
+        "dislike": false,
+        "like": false,
+      }
+    }
     title="Parky"
   />
 </div>

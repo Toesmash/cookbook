@@ -17,7 +17,10 @@ exports[`Render EditRecipe component 1`] = `
           "Pridat kecup",
         ],
         "preparation": 20,
-        "rating": false,
+        "rating": Object {
+          "dislike": false,
+          "like": false,
+        },
         "title": "Parky",
       }
     }

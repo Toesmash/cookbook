@@ -6,7 +6,10 @@ const dummyData = [
     preparation: 60,
     ingredients: ['1kg zemiaky', '300g hladka muka', 'sol', '250g bryndza', '100g slaninka'],
     instructions: ['Ocistit zemiaky, nastruhat, pridat muku a sol', 'Zamiesit cesto', 'Vlozit do vriacej vody', 'Zmiesat s bryndzou'],
-    rating: true
+    rating: {
+      like: false,
+      dislike: false
+    }
   },
   {
     id: '2',
@@ -15,7 +18,10 @@ const dummyData = [
     preparation: 20,
     ingredients: ['Parky', 'Kecup'],
     instructions: ['Vlozit parky do vriacej vody', 'Pridat kecup'],
-    rating: false
+    rating: {
+      like: false,
+      dislike: false
+    }
   }
 ];
 

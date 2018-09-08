@@ -1,4 +1,4 @@
-import { addRecipe, editRecipe, removeRecipe } from '../../../redux/actions/recipes';
+import { addRecipe, editRecipe, removeRecipe, likeRecipe, dislikeRecipe } from '../../../redux/actions/recipes';
 
 test('Remove recipe action object', () => {
   const action = removeRecipe('12345678');
@@ -32,7 +32,27 @@ test('Add recipe action object', () => {
     type: 'ADD_RECIPE',
     recipe: {
       id: expect.any(String),
-      ...data
+      ...data,
+      rating: {
+        like: false,
+        dislike: false
+      }
     }
+  })
+});
+
+test('Like recipe action object', () => {
+  const action = likeRecipe('12345678');
+  expect(action).toEqual({
+    type: 'LIKE_RECIPE',
+    id: '12345678'
+  })
+});
+
+test('Dislike recipe action object', () => {
+  const action = dislikeRecipe('12345678');
+  expect(action).toEqual({
+    type: 'DISLIKE_RECIPE',
+    id: '12345678'
   })
 });

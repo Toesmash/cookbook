@@ -31,5 +31,15 @@ exports[`Render Recipe component 1`] = `
   >
     Delete Recipe
   </button>
+  <button
+    onClick={[Function]}
+  >
+    Like
+  </button>
+  <button
+    onClick={[Function]}
+  >
+    Dislike
+  </button>
 </div>
 `;
