@@ -1,0 +1,82 @@
+.buttons {
+  display: flex;
+  align-items: center;
+  @media (max-width: $mobile-breakpoint) {
+    justify-content: center;
+  }
+}
+
+.button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  &:active {
+    margin-top: 2px;
+    border: none;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+.button--add {
+  background: $create-color;
+  border-bottom: 2px solid darken($create-color, 15);
+  color: white;
+}
+
+.button--edit {
+  background: $edit-color;
+  border-bottom: 2px solid darken($edit-color, 15);
+  margin-right: 2rem;
+  color: white;
+  @media (max-width: $mobile-breakpoint) {
+    font-size: 2rem;
+  }
+}
+
+.button--delete {
+  background: $remove-color;
+  border-bottom: 2px solid darken($remove-color, 15);
+  margin-right: 2rem;
+  color: white;
+  @media (max-width: $mobile-breakpoint) {
+    font-size: 2rem;
+  }
+}
+
+.button--rating {
+  color: silver;
+  font-size: 3rem;
+  transition: font-size 0.2s ease-in;
+  transition: margin 0.1s ease-in-out;
+  &:active {
+    margin: 0;
+  }
+  &:hover {
+    font-size: 3.3rem;
+  }
+}
+
+.button--up {
+  &:active {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.button--down {
+  margin-top: 1.5rem;
+  &:active {
+    margin-top: 2rem;
+  }
+}
+
+.button--like {
+  transition: color 0.2s ease;
+  color: $create-color;
+}
+
+.button--dislike {
+  transition: color 0.2s ease;
+  color: $remove-color;
+}

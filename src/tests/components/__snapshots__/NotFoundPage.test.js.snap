@@ -1,13 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`NotFoundPage rendering 1`] = `
-<div>
-  NotFound 
-  <Link
-    replace={false}
-    to="/"
-  >
-    Go home
-  </Link>
+<div
+  className="notfound__msg"
+>
+  <h1>
+    Page not found :(
+  </h1>
+  <p>
+    <Link
+      replace={false}
+      to="/"
+    >
+      Go home
+    </Link>
+  </p>
 </div>
 `;

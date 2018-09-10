@@ -2,42 +2,87 @@ import React from 'react';
 import * as Yup from 'yup';
 import { withFormik, Form, Field } from 'formik';
 
-export const RecipeForm = ({ errors, touched }) => {
+export const RecipeForm = ({ errors, touched, values }) => {
   return (
-    <div>
+    <div className='main-container'>
+      <h2 className='form__title'>Recipe form</h2>
       <Form>
-        <label>Title</label>
-        <Field type="text" name="title" component="input" />
-        {errors.title && touched.title && <div>{errors.title}</div>}
+        <div className='form__basicinfo'>
+          <div className='form__group'>
+            <label>Title <span className='form__required'>*</span></label>
+            <Field
+              type="text"
+              name="title"
+              component="input"
+              placeholder="Dumplings"
+              className={errors.title && touched.title ? 'form__input form__input--error' : 'form__input'}
+            />
+            {errors.title && touched.title && <div className='input__feedback'>{errors.title}</div>}
+          </div>
 
-        <label>Portions</label>
-        <Field type="number" name="feeds" component="input" />
-        {errors.feeds && touched.feeds && <div>{errors.feeds}</div>}
+          <div className='form__group'>
+            <label>Portions <span className='form__required'>*</span></label>
+            <Field
+              type="number"
+              name="feeds"
+              component="input"
+              placeholder="4"
+              className={errors.feeds && touched.feeds ? 'form__input form__input--error' : 'form__input'}
+            />
+            {errors.feeds && touched.feeds && <div className='input__feedback'>{errors.feeds}</div>}
+          </div>
 
-        <label>Preparation time in minutes</label>
-        <Field type="number" name="preparation" component="input" />
-        {errors.preparation && touched.preparation && <div>{errors.preparation}</div>}
+          <div className='form__group'>
+            <label>Time needed (minutes) <span className='form__required'>*</span></label>
+            <Field
+              type="number"
+              name="preparation"
+              component="input"
+              placeholder="60"
+              className={errors.preparation && touched.preparation ? 'form__input form__input--error' : 'form__input'}
+            />
+            {errors.preparation && touched.preparation && <div className='input__feedback'>{errors.preparation}</div>}
+          </div>
+        </div>
+        <div className='form__advancedinfo'>
+          <div className='form__group form__group--ingredients'>
+            <label>Ingredients <span className='form__required'>*</span></label>
+            <Field
+              type="text"
+              name="ingredients"
+              component="textarea"
+              placeholder={`350g flour\n250ml water\n1tbs salt\n...`}
+              className={errors.ingredients && touched.ingredients ? 'form__input form__input--textarea form__input--error ' : 'form__input form__input--textarea'}
+            />
+            {errors.ingredients && touched.ingredients && <div className='input__feedback'>{errors.ingredients}</div>}
+          </div>
 
-        <label>Ingredients</label>
-        <Field type="text" name="ingredients" component="textarea" />
-        {errors.ingredients && touched.ingredients && <div>{errors.ingredients}</div>}
-
-        <label>Instructions</label>
-        <Field type="text" name="instructions" component="textarea" />
-        {errors.instructions && touched.instructions && <div>{errors.instructions}</div>}
-
-        <button type='submit'>Submit</button>
+          <div className='form__group  form__group--instructions'>
+            <label>Instructions <span className='form__required'>*</span></label>
+            <Field
+              type="text"
+              name="instructions"
+              component="textarea"
+              placeholder={`Mix flour with water\nAdd salt\n...`}
+              className={errors.instructions && touched.instructions ? 'form__input form__input--textarea form__input--error ' : 'form__input form__input--textarea'}
+            />
+            {errors.instructions && touched.instructions && <div className='input__feedback'>{errors.instructions}</div>}
+          </div>
+        </div>
+        <div className='form__button'>
+          <button className='button button--add' type='submit'>Submit recipe</button>
+        </div>
       </Form>
     </div>
   );
 }
 
 const schema = {
-  title: Yup.string().required('Required field').matches(/^[a-zA-Z0-9,\.\-\/:\(\)]*$/, 'No special characters allowed'),
+  title: Yup.string().required('Required field').matches(/^[a-zA-Z0-9,\.\-\/:\(\)\s]*$/, 'No special characters allowed').max(16, 'Maximum allowed characters is 16').trim().lowercase(),
   feeds: Yup.number().required('Required field').min(1, 'Minimum number of portions is 1').max(8, 'Maximum number of portions is 8'),
   preparation: Yup.number().required('Required field').min(10, 'Minimum preparation time is 10minutes').max(300, 'Maximum preparation time is 5 hours'),
-  ingredients: Yup.string().required('Required field').matches(/^[a-zA-Z0-9,\.\-\/:\(\)\n\s]*$/, 'No special characters allowed'),
-  instructions: Yup.string().required('Required field').matches(/^[a-zA-Z0-9,\.\-\/:\(\)\n\s]*$/, 'No special characters allowed')
+  ingredients: Yup.string().required('Required field').matches(/^[a-zA-Z0-9,\.\-\/:\(\)\n\s]*$/, 'No special characters allowed').trim(),
+  instructions: Yup.string().required('Required field').matches(/^[a-zA-Z0-9,\.\-\/:\(\)\n\s]*$/, 'No special characters allowed').trim()
 };
 
 export const FormikRecipeForm = withFormik({
@@ -62,32 +107,6 @@ export const FormikRecipeForm = withFormik({
 })(RecipeForm);
 
 export default FormikRecipeForm;
-
-
-
-
-//   onSubmit = (e) => {
-//     e.preventDefault();
-//     if (!this.state.title || !this.state.ingredients || !this.state.instructions) {
-//       this.setState(() => ({ error: 'Please set correct' }))
-//     }
-//     else {
-//       this.setState(() => ({
-//         error: ''
-//       }))
-//       this.props.onSubmit({
-//         title: this.state.title,
-//         feeds: this.state.feeds,
-//         preparation: this.state.preparation,
-//         ingredients: this.state.ingredients.filter((item) => (item)),
-//         instructions: this.state.instructions.filter((item) => (item))
-//       })
-//     }
-//   }
-
-
-
-
 
 // export default class RecipeForm extends React.Component {
 //   constructor(props) {

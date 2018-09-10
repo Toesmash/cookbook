@@ -1,20 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header rendering 1`] = `
-<header>
-  <Link
-    replace={false}
-    to="/"
+<header
+  className="header"
+>
+  <div
+    className="main-container"
   >
-    <h1>
-      CookBook
-    </h1>
-  </Link>
-  <Link
-    replace={false}
-    to="/create"
-  >
-    Create Recipe
-  </Link>
+    <div
+      className="header__content"
+    >
+      <Link
+        className="header__title"
+        replace={false}
+        to="/"
+      >
+        <h1>
+          CookBook
+        </h1>
+      </Link>
+      <Link
+        className="header__recipe"
+        replace={false}
+        to="/create"
+      >
+        Add Recipe
+      </Link>
+    </div>
+  </div>
 </header>
 `;

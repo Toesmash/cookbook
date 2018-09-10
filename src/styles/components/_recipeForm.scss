@@ -1,0 +1,84 @@
+.form__title {
+  text-align: center;
+  padding: 3rem;
+  border-bottom: 1px solid silver;
+  @media (max-width: $mobile-breakpoint) {
+    padding: 0.5rem;
+  }
+}
+
+.form__group {
+  margin-bottom: 0.5rem;
+  label {
+    display: block;
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    color: grey;
+  }
+}
+
+.form__basicinfo {
+  display: flex;
+  div {
+    margin-right: 1rem;
+  }
+  div:last-child {
+    margin-right: 0;
+  }
+  div:first-child {
+    flex-grow: 1;
+  }
+  @media (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+  }
+}
+
+.form__input {
+  height: 4rem;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding-left: 1rem;
+}
+
+.form__input--error {
+  border: 1px solid $remove-color;
+}
+
+.input__feedback,
+.form__required {
+  color: $remove-color;
+  font-size: 1.3rem;
+}
+
+.form__advancedinfo {
+  overflow: auto;
+}
+
+.form__input--textarea {
+  @extend .form__input;
+  min-height: 20rem;
+  resize: vertical;
+  padding: 1rem;
+}
+
+.form__group--ingredients {
+  float: left;
+  width: 30%;
+  @media (max-width: $mobile-breakpoint) {
+    width: 100%;
+  }
+}
+
+.form__group--instructions {
+  float: right;
+  width: 68%;
+  @media (max-width: $mobile-breakpoint) {
+    width: 100%;
+  }
+}
+
+.form__button {
+  float: right;
+}

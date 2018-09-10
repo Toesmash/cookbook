@@ -6,22 +6,31 @@ exports[`Render EditRecipe component 1`] = `
     onSubmit={[Function]}
     recipe={
       Object {
-        "feeds": 4,
-        "id": "2",
+        "feeds": 2,
+        "id": "1cn0baso9",
         "ingredients": Array [
-          "Parky",
-          "Kecup",
+          "1cup soaked lentils",
+          "2medium onions",
+          "200g root vegetable",
+          "50g smoked ham",
+          "1tbs smoked paprika",
+          "Majoram",
+          "Parsley",
         ],
         "instructions": Array [
-          "Vlozit parky do vriacej vody",
-          "Pridat kecup",
+          "Cut one of the onions into small cubes and fry it in hot oil.",
+          "Drop some flour on the top of it and add also some water. Stir all of it and add pre-soaked lentils.",
+          "Let it simmer for a while while cooking, clean the vegetables, cut them into small pieces. Add it to the soup with whole onion and bacon.",
+          "Add salt and the rest of spices and cook it until vegetables are soft.",
+          "Next add parsley, soup seasoning (according to your taste) and marjoram.",
+          "Len the soup boil and after cool it down. Take out the whole piece of onion before serving.",
         ],
-        "preparation": 20,
+        "preparation": 50,
         "rating": Object {
           "dislike": false,
           "like": false,
         },
-        "title": "Parky",
+        "title": "Lentil Soup",
       }
     }
   />

@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render RecipeThumbnail 1`] = `
-<div>
-  <p>
-    <Link
-      replace={false}
-      to="/view/1"
-    >
-      halusky
-    </Link>
-  </p>
-</div>
+<Link
+  className="list__item"
+  replace={false}
+  to="/view/1cn0agbls"
+>
+  POTATO DUMPLINGS
+  <span
+    className="list__rating list__rating--up"
+  >
+    <Component />
+  </span>
+</Link>
 `;

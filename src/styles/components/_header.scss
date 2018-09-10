@@ -1,0 +1,35 @@
+.header {
+  background: $header-color;
+}
+
+.header__content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $mobile-breakpoint) {
+    // padding-bottom: 1rem;
+  }
+}
+
+.header__title {
+  font-family: 'Courgette', cursive;
+  color: white;
+  font-size: 2rem;
+  h1 {
+    margin: 0.5rem 0;
+  }
+  @media (max-width: $mobile-breakpoint) {
+    font-size: 1.5rem;
+  }
+}
+
+.header__recipe {
+  background: $create-color;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-bottom: 2px solid darken($create-color, 15);
+  &:active {
+    border: none;
+  }
+}

@@ -1,45 +1,256 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Render Recipe component 1`] = `
-<div>
-  <p>
-    halusky
-  </p>
-  <p>
-    1kg zemiaky
-    300g hladka muka
-    sol
-    250g bryndza
-    100g slaninka
-  </p>
-  <p>
-    Ocistit zemiaky, nastruhat, pridat muku a sol
-    Zamiesit cesto
-    Vlozit do vriacej vody
-    Zmiesat s bryndzou
-  </p>
-  <button>
-    <Link
-      replace={false}
-      to="/edit/1"
+<div
+  className="main-container"
+>
+  <h2
+    className="recipe__title"
+  >
+    POTATO DUMPLINGS
+  </h2>
+  <div
+    className="recipe__info"
+  >
+    <span>
+      <Component />
+      : 
+      2
+       
+      portions
+    </span>
+    <span>
+      <Component />
+      : 
+      60
+       minutes
+    </span>
+  </div>
+  <div
+    className="recipe__content"
+  >
+    <div
+      className="recipe__ingredients"
     >
-      Edit Recipe
-    </Link>
-  </button>
-  <button
-    onClick={[Function]}
+      <h3>
+        Ingredients
+      </h3>
+      <p
+        key="0"
+      >
+        - 
+        2 medium potatoes
+      </p>
+      <p
+        key="1"
+      >
+        - 
+        1cup flour
+      </p>
+      <p
+        key="2"
+      >
+        - 
+        150gr bacon
+      </p>
+      <p
+        key="3"
+      >
+        - 
+        1tsp salt
+      </p>
+      <p
+        key="4"
+      >
+        - 
+        1/2 tbsp oil
+      </p>
+      <p
+        key="5"
+      >
+        - 
+        125g bryndza cheese
+      </p>
+      <p
+        key="6"
+      >
+        - 
+        50ml cream
+      </p>
+    </div>
+    <div
+      className="recipe__instructions"
+    >
+      <h3>
+        Instructions
+      </h3>
+      <div
+        className="recipe__steps"
+        key="0"
+      >
+        <span
+          className="recipe__index"
+        >
+          1
+          .
+        </span>
+        <div>
+          Grate the potatoes and place in a bowl
+        </div>
+      </div>
+      <div
+        className="recipe__steps"
+        key="1"
+      >
+        <span
+          className="recipe__index"
+        >
+          2
+          .
+        </span>
+        <div>
+          Mix flour and salt with potatoes until you get a thick, sticky dough
+        </div>
+      </div>
+      <div
+        className="recipe__steps"
+        key="2"
+      >
+        <span
+          className="recipe__index"
+        >
+          3
+          .
+        </span>
+        <div>
+          Chop bacon into small cubes and fry in 1/2 Tablespoon oil on low heat until crisp and brown. Meanwhile bring a large pot of water to a boil and add some salt to it
+        </div>
+      </div>
+      <div
+        className="recipe__steps"
+        key="3"
+      >
+        <span
+          className="recipe__index"
+        >
+          4
+          .
+        </span>
+        <div>
+          Test a small spoonful of the halusky mix in the boiling water. It should cook into a soft dumpling in 3-4 minutes. If the mix seem like its not holding together, add more flour to thicken
+        </div>
+      </div>
+      <div
+        className="recipe__steps"
+        key="4"
+      >
+        <span
+          className="recipe__index"
+        >
+          5
+          .
+        </span>
+        <div>
+          Drip several halusky dumplings in the boiling water at a time. They will sink to the bottom so give them a quick stir
+        </div>
+      </div>
+      <div
+        className="recipe__steps"
+        key="5"
+      >
+        <span
+          className="recipe__index"
+        >
+          6
+          .
+        </span>
+        <div>
+          Cook halusky until they float to the top and have changed color. Strain out with a slotted spoon
+        </div>
+      </div>
+      <div
+        className="recipe__steps"
+        key="6"
+      >
+        <span
+          className="recipe__index"
+        >
+          7
+          .
+        </span>
+        <div>
+          Transfer to a large bowl and mix with the cheese until evenly coated
+        </div>
+      </div>
+      <div
+        className="recipe__steps"
+        key="7"
+      >
+        <span
+          className="recipe__index"
+        >
+          8
+          .
+        </span>
+        <div>
+          Divide halusky onto plates and top with the fried bacon
+        </div>
+      </div>
+      <div
+        className="recipe__steps"
+        key="8"
+      >
+        <span
+          className="recipe__index"
+        >
+          9
+          .
+        </span>
+        <div>
+          Enjoy :)
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="recipe__actions"
   >
-    Delete Recipe
-  </button>
-  <button
-    onClick={[Function]}
-  >
-    Like
-  </button>
-  <button
-    onClick={[Function]}
-  >
-    Dislike
-  </button>
+    <div
+      className="buttons"
+    >
+      <button
+        className="button button--rating button--up button--like"
+        onClick={[Function]}
+      >
+        <Component />
+      </button>
+      <button
+        className="button button--rating button--down"
+        onClick={[Function]}
+      >
+        <Component />
+      </button>
+    </div>
+    <div
+      className="buttons"
+    >
+      <Link
+        replace={false}
+        to="/edit/1cn0agbls"
+      >
+        <button
+          className="button button--edit"
+        >
+          Edit Recipe
+        </button>
+      </Link>
+      <button
+        className="button button--delete"
+        onClick={[Function]}
+      >
+        Delete Recipe
+      </button>
+    </div>
+  </div>
 </div>
 `;

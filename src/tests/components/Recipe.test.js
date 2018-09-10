@@ -16,7 +16,7 @@ test('Render Recipe component', () => {
 });
 
 test('Test Recipe onRemove call', () => {
-  wrapper.find('button').at(1).simulate('click');
+  wrapper.find('button').at(3).simulate('click');
   expect(removeRecipe).toHaveBeenLastCalledWith(dummyData[0].id);
   expect(history.push).toHaveBeenLastCalledWith('/');
 });

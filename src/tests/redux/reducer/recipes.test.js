@@ -9,10 +9,10 @@ test('Default state configuration', () => {
 test('Remove recipe - valid id', () => {
   const action = {
     type: 'REMOVE_RECIPE',
-    id: '2'
+    id: '1cn0baso9'
   };
   const state = recipeReducer(dummyData, action);
-  expect(state).toEqual([dummyData[0]]);
+  expect(state).toEqual([dummyData[0], dummyData[2]]);
 });
 
 test('Remove recipe - invalid id', () => {
@@ -27,7 +27,7 @@ test('Remove recipe - invalid id', () => {
 test('Edit recipe - valid id', () => {
   const action = {
     type: 'EDIT_RECIPE',
-    id: '1',
+    id: '1cn0agbls',
     update: {
       instructions: ['instruction 1', 'instruction 2']
     }
@@ -77,7 +77,7 @@ test('Like recipe', () => {
 test('Dislike recipe', () => {
   const action = {
     type: 'DISLIKE_RECIPE',
-    id: '2'
+    id: '1cn0baso9'
   };
   const state = recipeReducer(dummyData, action);
   expect(state[1].rating).toEqual({ like: false, dislike: true });
